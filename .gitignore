@@ -1,0 +1,27 @@
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+[Pp]ackages/
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# visual studio database projects
+*.dbmdl
+
+#Test files
+*.testsettings
+
+#Temp files
+~*.xlsx
+~*.docx
