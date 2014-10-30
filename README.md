@@ -1,5 +1,5 @@
 #SolTech Xamarin Forms Toolkit
-From http://www.soltech.net <img alt="SolTech" src="http://www.soltech.net/images/logo.png">
+<p>From http://www.soltech.net <img alt="SolTech" src="http://www.soltech.net/images/logo.png"></p>
 =========
 
 The SolTech Xamarin Forms Toolkit is a set of helpful extensions to the Xamarin Forms framework.
