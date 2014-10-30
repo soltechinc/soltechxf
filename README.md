@@ -1,4 +1,5 @@
-<div><a href="http://www.soltech.net"><img alt="SolTech" src="http://www.soltech.net/images/logo.png"></a>#SolTech Xamarin Forms Toolkit</div>
+<div><a href="http://www.soltech.net"><img alt="SolTech" src="http://www.soltech.net/images/logo.png"></a>
+#SolTech Xamarin Forms Toolkit</div>
 <p>From http://www.soltech.net</p>
 =========
 
