@@ -18,7 +18,7 @@ A two-way bound property that allows you to set/get the currently selected item.
 
 ### Toggle Selector
 A hyper-simplified A/B picker that uses native controls to pick an either/or selector. This is different from the Xamarin Forms Switch control in that the developer can control the Left/Right text and it is rendered using native "selector" controls:
-Platform|Native Control
+Platform | Native Control
 ------------- | -------------
 iOS | UISegmentedControl
 Android | Radio Button
