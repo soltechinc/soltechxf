@@ -36,6 +36,21 @@ namespace SolTech.Forms
             return Name;
         }
 
+        public override bool Equals(object obj)
+        {
+            PickerItem<T> other = obj as PickerItem<T>;
+            if (other == null) return false;
+
+            return 
+                String.Compare(Name, other.Name, StringComparison.CurrentCulture) == 0 && 
+                Item.Equals(other.Item);
+        }
+
+        public override int GetHashCode()
+        {
+            return Item.GetHashCode();
+        }
+
         public static IEnumerable<PickerItem<T>> GetPickerItemList(IEnumerable<T> items)
         {
             var list = new List<PickerItem<T>>();
@@ -71,6 +86,32 @@ namespace SolTech.Forms
             return pickerEntry;
         }
 
+        public static PickerItem<T> GetPickerItemFromEnum(T item)
+        {
+            Type enumType = typeof(T);
+            if (!enumType.GetTypeInfo().IsEnum) throw new ArgumentException("You must provide an enumeration.", "enumeration");
+
+            if (!Enum.IsDefined(enumType, item))
+            {
+                throw new ArgumentOutOfRangeException("item");
+            }
+
+            var entry = enumType.GetRuntimeField(Enum.GetName(enumType, item));
+            var description = entry.GetCustomAttribute<DescriptionAttribute>();
+            PickerItem<T> pickerEntry;
+            if (description != default(DescriptionAttribute))
+            {
+                pickerEntry = new PickerItem<T>(description.Description, (T)entry.GetValue(null));
+            }
+            else
+            {
+                pickerEntry = new PickerItem<T>(enumType.Name, (T)entry.GetValue(null));
+            }
+            
+
+            return pickerEntry;
+        }
+
         public static IList<PickerItem<T>> GetPickerItemListFromEnum(ILocalizer localizer, String resourceNamespace)
         {
             if (localizer == null) throw new ArgumentNullException("localizer");
@@ -91,17 +132,29 @@ namespace SolTech.Forms
             return list;
         }
 
-        public override bool Equals(object obj)
+        public static IList<PickerItem<T>> GetPickerItemListFromEnum()
         {
-            PickerItem<T> other = obj as PickerItem<T>;
-            if (other == null) return false;
+            Type enumType = typeof(T);
+            if (!enumType.GetTypeInfo().IsEnum) throw new ArgumentException("You must provide an enumeration.", "enumeration");
 
-            return Item.Equals(other.Item);
-        }
+            var list = new List<PickerItem<T>>();
+            foreach (var entryName in Enum.GetNames(enumType))
+            {
+                var entry = enumType.GetRuntimeField(entryName);
+                var description = entry.GetCustomAttribute<DescriptionAttribute>();
+                PickerItem<T> pickerEntry;
+                if (description != default(DescriptionAttribute))
+                {
+                    pickerEntry = new PickerItem<T>(description.Description, (T)entry.GetValue(null));
+                }
+                else
+                {
+                    pickerEntry = new PickerItem<T>(enumType.Name, (T)entry.GetValue(null));
+                }
+                list.Add(pickerEntry);
+            }
 
-        public override int GetHashCode()
-        {
-            return Item.GetHashCode();
+            return list;
         }
     }
 }
