@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolTech.Xamarin.Forms", "Soltech.Xamarin.Forms\SolTech.Xamarin.Forms.csproj", "{ECE6750D-6D1E-449D-8DA9-59031FA5D924}"
 EndProject
@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		SolTechIcon32x32.png = SolTechIcon32x32.png
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateVersionInfo", "UpdateVersionInfo\UpdateVersionInfo.csproj", "{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +84,14 @@ Global
 		{D3B9B63D-9961-40AD-85C0-C3A17DEE6170}.Release|ARM.Build.0 = Release|ARM
 		{D3B9B63D-9961-40AD-85C0-C3A17DEE6170}.Release|x86.ActiveCfg = Release|x86
 		{D3B9B63D-9961-40AD-85C0-C3A17DEE6170}.Release|x86.Build.0 = Release|x86
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Release|ARM.ActiveCfg = Release|Any CPU
+		{4AD77D5A-D9B8-4659-B8DF-3F66A698DAD1}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
