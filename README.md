@@ -3,7 +3,7 @@ SolTech Xamarin Forms Toolkit</h1></div>
 <p>From http://www.soltech.net</p>
 =========
 
-The SolTech Xamarin Forms Toolkit is a set of helpful extensions to the Xamarin Forms framework.
+The SolTech Xamarin Forms Toolkit is a set of helpful extensions to the Xamarin Forms framework. The binaries are available via NuGet (package name <a href="https://www.nuget.org/packages/SolTech.Xamarin.Forms/">SolTech.Xamarin.Forms</a>) with the source available at <a href="https://github.com/soltechinc/soltechxf">this GitHub repository</a>.
 
 ## Controls
 ### BoundPicker
