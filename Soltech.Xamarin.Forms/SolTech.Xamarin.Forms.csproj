@@ -43,6 +43,7 @@
     <Compile Include="Controls\ImageButton.cs" />
     <Compile Include="Controls\LimitedEntry.cs" />
     <Compile Include="Controls\PickerItem.cs" />
+    <Compile Include="Controls\StatefulButton.cs" />
     <Compile Include="Controls\ToggleSelector.cs" />
     <Compile Include="ExtensionMethods\ServiceProviderExtensions.cs" />
     <Compile Include="Localization\ILocalizer.cs" />
