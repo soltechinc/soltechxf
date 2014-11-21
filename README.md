@@ -52,6 +52,16 @@ A subclass of the Xamarin Forms Entry control that allows the developer to place
 ##### MaxLength
 A one-way bound property that allows you to set the maximum number of characters the native entry control will allow.
 
+### StatefulButton
+A somewhat confusingly-named button that allows you to specify the background color to use when in the Enabled/Disabled state.
+
+#### Properties
+##### EnabledColor
+A one-way bound property that allows you to set the background color to use then the button's IsEnabled property is set to true.
+
+##### EnabledColor
+A one-way bound property that allows you to set the background color to use then the button's IsEnabled property is set to false.
+
 ## Helper Classes
 ### PickerItem<T>
 The Picker (and therefore, the BoundPicker) default to using the ToString() of the items supplied to it. When using the Picker control, this requires a developer to maintain a lookup table of string/position -> item. The PickerItem<T> class is a helper that can be used to wrap non-string items (e.g., enumerations, value types, complex objects) so that the picker can display a user-friendly string while associating the currently selected Picker item to a semantically-useful item.
