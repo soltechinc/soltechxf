@@ -3,6 +3,7 @@ using MonoTouch.UIKit;
 using SolTech.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using MonoTouch.CoreText;
 
 [assembly: ExportRenderer(typeof(LimitedEntry), typeof(SolTech.Forms.iOS.LimitedEntryRenderer))]
 
@@ -10,6 +11,10 @@ namespace SolTech.Forms.iOS
 {
     public class LimitedEntryRenderer : EntryRenderer
     {
+		public LimitedEntryRenderer ()
+		{
+			
+		}
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
