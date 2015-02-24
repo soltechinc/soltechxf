@@ -1,7 +1,8 @@
-using MonoTouch.UIKit;
+using UIKit;
 using SolTech.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using System;
 
 [assembly: ExportRenderer(typeof(ToggleSelector), typeof(SolTech.Forms.iOS.ToggleSelectorRenderer))]
 
@@ -46,7 +47,7 @@ namespace SolTech.Forms.iOS
             var nativeSegmentedControl = sender as UISegmentedControl;
             if (nativeSegmentedControl == null) return;
 
-            this.Element.SelectedItem = (ToggleSelectorItem)nativeSegmentedControl.SelectedSegment;
+			this.Element.SelectedItem = (ToggleSelectorItem)(int)nativeSegmentedControl.SelectedSegment;
         }
 
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

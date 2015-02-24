@@ -1,9 +1,9 @@
 
-using MonoTouch.UIKit;
+using UIKit;
 using SolTech.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.CoreText;
+using CoreText;
 
 [assembly: ExportRenderer(typeof(LimitedEntry), typeof(SolTech.Forms.iOS.LimitedEntryRenderer))]
 
