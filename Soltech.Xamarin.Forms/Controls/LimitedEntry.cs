@@ -6,7 +6,7 @@ namespace SolTech.Forms
     {
         /// <summary>Identifies the MaxLength bindable property.</summary>
         /// <remarks />
-        public static readonly BindableProperty MaxLengthProperty = BindableProperty.Create("MaxLength", typeof(int), typeof(LimitedEntry), -1, BindingMode.OneWay, null, null, null, null);
+		public static readonly BindableProperty MaxLengthProperty = BindableProperty.Create<LimitedEntry, int>(t => t.MaxLength, -1);
 
         public int MaxLength
         {

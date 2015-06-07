@@ -1,0 +1,11 @@
+﻿<Properties StartupItem="Soltech.Xamarin.Forms/SolTech.Xamarin.Forms.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../AMS.Core/ViewModels/BaseViewModel.cs" line="101" offsetX="520" offsetY="1500" expression="location" liveUpdate="False" />
+    <Watch file="../AMS.Core/Core/Extensions/BindablePropertyExtensions.cs" line="62" offsetX="602" offsetY="915" expression="binding.Binding" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

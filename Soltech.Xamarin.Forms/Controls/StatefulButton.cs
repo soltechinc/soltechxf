@@ -4,8 +4,9 @@ namespace SolTech.Forms
 {
     public class StatefulButton : Button
     {
-        public static readonly BindableProperty EnabledColorProperty = BindableProperty.Create("EnabledColor", typeof(Color), typeof(StatefulButton), Color.Gray, BindingMode.OneWay, null, StatefulButton.ColorsChanged, null, null);
-        public static readonly BindableProperty DisabledColorProperty = BindableProperty.Create("DisabledColor", typeof(Color), typeof(StatefulButton), Color.Gray, BindingMode.OneWay, null, StatefulButton.ColorsChanged, null, null);
+		public static readonly BindableProperty EnabledColorProperty = BindableProperty.Create<StatefulButton, Color>(t => t.EnabledColor, Color.Gray, BindingMode.OneWay, null, StatefulButton.ColorsChanged);
+
+		public static readonly BindableProperty DisabledColorProperty = BindableProperty.Create<StatefulButton, Color>(t => t.DisabledColor, Color.Gray, BindingMode.OneWay, null, StatefulButton.ColorsChanged);
 
         public StatefulButton()
         {
@@ -45,7 +46,7 @@ namespace SolTech.Forms
             }
         }
 
-        private static void ColorsChanged(BindableObject bindable, object oldValue, object newValue)
+		private static void ColorsChanged(BindableObject bindable, Color oldValue, Color newValue)
         {
             StatefulButton statefuleButton = (StatefulButton)bindable;
             if (statefuleButton != null)
